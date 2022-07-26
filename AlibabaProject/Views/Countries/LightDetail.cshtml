@@ -1,0 +1,84 @@
+﻿@model  AlibabaProject.Models.Country
+@using AlibabaProject.Models
+@{
+    Country countryList = Model as Country;
+    ViewBag.Title = "LightDetail";
+   Layout = "~/Views/Shared/_LightLayout.cshtml";
+}
+
+            <div class="row">
+                <div class="col-md-2">
+                    <button class="btn btn-block btn-default ml-66 btn-back" onclick="location.href='@Url.Action("LightHomePage","Countries")'"><i class="fa fa-arrow-left back-icon"></i> <span class="back-span">Back</span></button>
+
+                </div>
+            </div>
+
+            <div class="row detailBox">
+                <div class="col-md-6 col-12">
+                  <img class="dtlImg" src="@countryList.Flag.Png" width="430" height="300" alt="@countryList.Name"/> 
+                </div>
+                <div class="col-md-6 detail-info">
+                    <div class="detailTitle">
+                        @countryList.Name
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6"><span class="dtlTitle">Native Name:</span>&nbsp;<span class="dtlTxt">@countryList.NativeName</span></div>
+                        <div class="col-md-6">
+                            <span class="dtlTitle"> Top Level Domain:</span>&nbsp; @foreach (var item in @countryList.TopLevelDomain)
+                            {
+                                <span class="dtlTxt">@item</span>
+                            }
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6"><span class="dtlTitle">Population:</span>&nbsp;<span class="dtlTxt">@countryList.Population</span></div>
+                        <div class="col-md-6">
+                            <span class="dtlTitle">Currencies:</span>&nbsp;
+                            @foreach (var item in @countryList.Currencies)
+                            {
+                                if (@countryList.Currencies.Count == 1)
+                                {
+                                    <span class="dtlTxt">@item.Name</span>
+                                }
+                                else
+                                {
+                                    <span class="dtlTxt"><ol style="list-style:none"><li>@item.Name</li></ol></span>
+
+                                }
+                            }
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6"><span class="dtlTitle">Region:</span>&nbsp;<span class="dtlTxt">@countryList.Region</span></div>
+                        <div class="col-md-6">
+                            <span class="dtlTitle">Languages:</span> &nbsp;
+                            @foreach (var item in @countryList.Languages)
+                            {
+                                <span class="dtlTxt">@item.Name</span>
+                            }
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6"><span class="dtlTitle">Sub Region:</span>&nbsp;<span class="dtlTxt">@countryList.Subregion</span></div>
+                        <div class="col-md-6"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6"><span class="dtlTitle">Capital:</span>&nbsp;<span class="dtlTxt">@countryList.Capital</span></div>
+                        <div class="col-md-6"></div>
+                    </div>
+                    <div class="row">
+                        <div class="flex">
+                            <span class="dtlTitle">Border Countries:</span>&nbsp;@if (@countryList.Borders != null)
+                            {
+                                foreach (var item in @countryList.Borders)
+                                {
+                                    <div class="borderBlock">@item</div>
+
+                                }
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>

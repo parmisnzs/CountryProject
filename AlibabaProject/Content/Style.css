@@ -1,0 +1,371 @@
+﻿
+.body-container-Light {
+    margin-left: 13%;
+    margin-right: 13%;
+    background-color: #808080;
+    font-family: 'NunitoSans-Regular';
+}
+@media (max-width: 600px) {
+    .body-container-Light {
+        margin-left: 0px;
+        margin-right: 0px;
+        background-color: #808080;
+        font-family: 'NunitoSans-Regular';
+    }
+
+    .body-container-Dark {
+        margin-left: 0px!important;
+        margin-right: 0px !important;
+        font-family: 'NunitoSans-Regular';
+    }
+    .btn-group
+    {
+        float:left !important;
+        margin-bottom:10px;
+    }
+    .countryBox{
+        margin-left:50px;
+    }
+    .countryBox-dark {
+        margin-left: 50px;
+    }
+    .back-icon
+    {
+        position:relative !important;
+        top:0px !important;
+        right:10px !important;
+    }
+
+    .dtlImg
+    {
+        width:355px;
+    }
+    .detailBox
+    {
+        margin-left:-20px !important;
+    }
+    .ml-66
+    {
+        margin-left:0px !important;
+    }
+}
+.body-container-Dark {
+    margin-left: 13%;
+    margin-right: 13%;
+    font-family: 'NunitoSans-Regular';
+}
+
+.box {
+    background-color: hsl(0, 0%, 100%) !important;
+}
+
+.box-body {
+    background-color: hsl(0, 0%, 98%) !important;
+}
+
+.box-heading {
+    background-color: hsl(0, 0%, 100%) !important;
+    font-family: 'NunitoSans-Regular';
+    padding: 15px 15px 15px 15px;
+    -moz-box-shadow: 0px 1px 1px #de1dde;
+    box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+    font-size: 14px;
+}
+
+p {
+    font-family: 'NunitoSans-Regular';
+    font-size: 14px;
+}
+
+b {
+    font-family: 'NunitoSans-Bold';
+    font-size: 16px;
+    white-space: nowrap;
+}
+
+.float-right {
+    float: right;
+    font-size:12px;
+    margin-top:5px;
+}
+
+.form-control {
+    font-size: 12px;
+    border: 1px solid #f0eeee;
+    height: 40px;
+}
+
+.inputContainer i {
+    position: absolute;
+}
+.inputContainer-Dark i {
+    position: absolute;
+    color: hsl(0, 0%, 100%)!important;
+}
+
+.inputContainer {
+    margin-bottom: 30px;
+}
+ 
+.icon {
+    padding: 15px;
+    color: rgb(174 174 174);
+    width: 70px;
+    text-align: left;
+    bottom: 0px;
+    font-size: 12px;
+}
+
+.Field {
+    width: 100%;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 40px;
+    font-size: 12px;
+}
+.Field-Dark {
+    width: 100%;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 40px;
+    font-size: 12px;
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(209, 23%, 22%) !important;
+    border-color: hsl(209, 23%, 22%) !important;
+}
+.btn-default {
+    border-color: #f6f6f6;
+    -moz-box-shadow: 0px 1px 1px #de1dde;
+    box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+}
+
+.btn-group {
+    float: right;
+    margin-right: 30px;
+}
+
+    .btn-group > .btn, .btn-group-vertical > .btn {
+        position: relative;
+        float: left;
+        top: 0px;
+        height: 40px;
+        font-size: 11px;
+        width: 150px;
+        font-weight: bold;
+        left: 0px;
+    }
+.btn-icon
+{
+    font-weight:bold;
+}
+.btn-span
+{
+    float:left;
+}
+.dropdown-menu > li
+{
+    font-size:12px;
+    font-weight:bold;
+}
+.title
+{
+    margin-left:10px;
+    margin-top:20px;
+    /*white-space:nowrap;*/
+    font-weight:bold;
+}
+.title-dark {
+    margin-left: 10px;
+    margin-top: 20px;
+    font-weight: bold;
+    color: hsl(0, 0%, 100%);
+}
+.countryBox {
+    background-color: #fff;
+    border: 1px solid #f1f1f1;
+    box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+    border-radius: 5px;
+    margin-bottom: 40px;
+    width: 225px;
+    height: 238px;
+    cursor: pointer;
+}
+.countryBox-dark {
+    background-color: hsl(209, 23%, 22%);
+    border: 1px solid hsl(209, 23%, 22%);
+    box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+    border-radius: 5px;
+    margin-bottom: 40px;
+    width: 225px;
+    height: 238px;
+    cursor: pointer;
+}
+.img-country
+{
+    object-fit:fill;
+}
+.infoList {
+    list-style: none;
+    font-size: 12px;
+    margin-top: 10px;
+    margin-left: -28px;
+}
+.infoList-dark {
+    list-style: none;
+    font-size: 12px;
+    margin-top: 10px;
+    margin-left: -28px;
+    color: hsl(0, 0%, 100%);
+}
+.listBold {
+    font-size: 12px
+}
+
+.ml-1{
+    margin-left: 1px;
+}
+.ml-2 {
+    margin-left: 2px;
+}
+.ml-3 {
+    margin-left: 3px;
+}
+.ml-4 {
+    margin-left: 4px;
+}
+.ml-66 {
+    margin-left: 66px;
+}
+.detailBox
+{
+    margin-top:65px;
+    margin-left: 50px;
+    margin-right:50px;
+    margin-bottom:250px;
+}
+.btn-back {
+    width: 90px;
+    box-shadow: 3px 3px 3px #e0e0e0
+}
+.back-icon
+{
+position:absolute;
+top:10px;
+right:90px;
+
+}
+.detailTitle {
+    font-weight: bold;
+    font-size: 22px;
+    font-family: 'NunitoSans-Bold';
+    margin-bottom:20px;
+}
+.detailTitle-dark {
+    font-weight: bold;
+    font-size: 22px;
+    font-family: 'NunitoSans-Bold';
+    margin-bottom: 20px;
+    color: hsl(0, 0%, 100%);
+}
+.detail-info {
+    margin-top: 30px;
+}
+.dtlTitle
+{
+    font-size:12px;
+    font-weight:bold;
+}
+.dtlTxt-dark {
+    font-size: 11px;
+    color: hsl(0, 0%, 100%);
+}
+.dtlTitle-dark {
+    font-size: 12px;
+    font-weight: bold;
+    color: hsl(0, 0%, 100%);
+}
+.dtlTxt
+{
+    font-size:10px;
+}
+.back-span
+{
+    font-size:12px;
+}
+.box-dark {
+    background-color: hsl(207, 26%, 17%) !important;
+    border-color: hsl(207, 26%, 17%) !important;
+}
+.box-body-dark {
+    background-color: hsl(207, 26%, 17%);
+}
+
+.box-heading-dark {
+    background-color: hsl(209, 23%, 22%) !important;
+    border-color: hsl(209, 23%, 22%) !important;
+    font-family: 'NunitoSans-Regular';
+    padding: 15px 15px 15px 15px;
+    -moz-box-shadow: 0px 1px 1px #de1dde;
+    box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+    font-size: 14px;
+}
+.countryListDiv
+{
+    margin-top:50px;
+}
+.mainTitle {
+    color: hsl(0, 0%, 100%);
+}
+.float-right-Dark {
+    color: hsl(0, 0%, 100%);
+    float:right;
+    font-size:12px;
+    margin-top:10px;
+}
+.dropdown-toggle-dark {
+    background-color: hsl(209, 23%, 22%);
+    border-color: hsl(209, 23%, 22%);
+    color: hsl(0, 0%, 100%);
+}
+.btn-back-dark {
+    width: 90px;
+    border-color: hsl(209, 23%, 22%);
+    box-shadow: 3px 3px 3px hsl(209deg 6% 11%);
+    background-color: hsl(209, 23%, 22%);
+    color: hsl(0, 0%, 100%);
+}
+.borderBlock-dark {
+    border: 1px solid hsl(209, 23%, 22%);
+    border-radius: 3px;
+    background-color: hsl(209, 23%, 22%);
+    width: 14%;
+    margin-left: 10px;
+    color: #acaaaa;
+    font-size: 10px;
+    text-align: center;
+    padding-top: 8px;
+    height: 30px;
+}
+.borderBlock {
+    background-color: hsl(0, 0%, 100%);
+    border: 1px solid #efefefbd;
+    border-radius: 3px;
+    width: 14%;
+    margin-left: 10px;
+    font-size: 10px;
+    text-align: center;
+    padding-top: 8px;
+    height:30px;
+}
+
+.flex {
+    display: flex;
+    margin-left: 15px;
+    margin-top: 40px;
+}
+.switchMode
+{
+    color:#000;
+}

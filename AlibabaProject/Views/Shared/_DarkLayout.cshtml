@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link href="~/Content/NunitoSans.css" rel="stylesheet" />
+    <link href="~/fonts/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/Content/Style.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div class="body-container-Dark">
+        <div class="panel panel-default box-dark">
+            <div class="panel-heading box-heading-dark">
+                <div class="row">
+                    <div class="col-md-4 mainTitle">
+                        <p><b>Where In The Word?</b></p>
+                    </div>
+                    <div class="col-md-4">
+
+                    </div>
+                    <div class="col-md-4">
+                       <a  href="@Url.Action("LightHomePage","Countries")"><span class="float-right-Dark"> <i class="fa fa-moon-o"></i>&nbsp;Light Mode</span></a> 
+                    </div>
+                </div>
+
+            </div>
+            <div class="panel-body box-body-dark">
+
+                @RenderBody()
+            </div>
+        </div>
+
+
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

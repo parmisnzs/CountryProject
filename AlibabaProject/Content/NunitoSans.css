@@ -1,0 +1,58 @@
+﻿
+@font-face {
+    font-family: 'NunitoSans';
+    src: url('../fonts/NunitoSans-Black.ttf') format('truetype');
+    font-weight:normal;
+}
+@font-face {
+    font-family: 'NunitoSans-BlackItalic';
+    src: url('../fonts/NunitoSans-BlackItalic.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'NunitoSans-Bold';
+    src: url('../fonts/NunitoSans-Bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'NunitoSans-BoldItalic';
+    src: url('../fonts/NunitoSans-BoldItalic.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'NunitoSans-ExtraBold';
+    src: url('../fonts/NunitoSans-ExtraBold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'NunitoSans-ExtraBoldItalic';
+    src: url('../fonts/NunitoSans-ExtraBoldItalic.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'NunitoSans-ExtraLight';
+    src: url('../fonts/NunitoSans-ExtraLight.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'NunitoSans-ExtraLightItalic';
+    src: url('../fonts/NunitoSans-ExtraLightItalic.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'NunitoSans-Italic';
+    src: url('../fonts/NunitoSans-Italic.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'NunitoSans-Light';
+    src: url('../fonts/NunitoSans-Light.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'NunitoSans-LightItalic';
+    src: url('../fonts/NunitoSans-LightItalic.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'NunitoSans-Regular';
+    src: url('../fonts/NunitoSans-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'NunitoSans-SemiBold';
+    src: url('../fonts/NunitoSans-SemiBold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'NunitoSans-SemiBoldItalic';
+    src: url('../fonts/NunitoSans-SemiBoldItalic.ttf') format('truetype');
+}

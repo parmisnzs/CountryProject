@@ -1,0 +1,84 @@
+﻿@model  AlibabaProject.Models.Country
+@using AlibabaProject.Models
+@{
+    Country countryList = Model as Country;
+    ViewBag.Title = "DarkDetail";
+    Layout = "~/Views/Shared/_DarkLayout.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-2">
+        <button class="btn btn-block btn-default ml-66 btn-back-dark" onclick="location.href='@Url.Action("DarkHomePage","Countries")'"><i class="fa fa-arrow-left back-icon"></i> <span class="back-span">Back</span></button>
+
+    </div>
+</div>
+
+<div class="row detailBox">
+    <div class="col-md-6 col-12">
+        <img class="dtlImg" src=" @countryList.Flag.Png" width="430" height="300" alt="@countryList.Name" />
+    </div>
+    <div class="col-md-6 detail-info">
+        <div class="detailTitle-dark">
+            @countryList.Name
+        </div>
+        <div class="row">
+            <div class="col-md-6"><span class="dtlTitle-dark">Native Name:</span>&nbsp;<span class="dtlTxt-dark">@countryList.NativeName</span></div>
+            <div class="col-md-6">
+                <span class="dtlTitle-dark"> Top Level Domain:</span>&nbsp; @foreach (var item in @countryList.TopLevelDomain)
+                {
+                    <span class="dtlTxt-dark">@item</span>
+                }
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6"><span class="dtlTitle-dark">Population:</span>&nbsp;<span class="dtlTxt-dark">@countryList.Population</span></div>
+            <div class="col-md-6">
+                <span class="dtlTitle-dark">Currencies:</span>&nbsp;
+                @foreach (var item in @countryList.Currencies)
+                {
+                    if (@countryList.Currencies.Count == 1)
+                    {
+                        <span class="dtlTxt-dark">@item.Name</span>
+                    }
+                    else
+                    {
+                        <span class="dtlTxt-dark"><ol style="list-style:none"><li>@item.Name</li></ol></span>
+
+                    }
+                }
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6"><span class="dtlTitle-dark">Region:</span>&nbsp;<span class="dtlTxt-dark">@countryList.Region</span></div>
+            <div class="col-md-6">
+                <span class="dtlTitle-dark">Languages:</span> &nbsp;
+                @foreach (var item in @countryList.Languages)
+                {
+                    <span class="dtlTxt-dark">@item.Name</span>
+                }
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6"><span class="dtlTitle-dark">Sub Region:</span>&nbsp;<span class="dtlTxt-dark">@countryList.Subregion</span></div>
+            <div class="col-md-6"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-6"><span class="dtlTitle-dark">Capital:</span>&nbsp;<span class="dtlTxt-dark">@countryList.Capital</span></div>
+            <div class="col-md-6"></div>
+        </div>
+        <div class="row">
+            <div class="flex">
+                <span class="dtlTitle-dark">Border Countries:</span>&nbsp;@if (@countryList.Borders != null)
+                {
+                    foreach (var item in @countryList.Borders)
+                    {
+                        <div class="borderBlock-dark">@item</div>
+
+                    }
+                }
+            </div>
+            </div>
+    </div>
+</div>

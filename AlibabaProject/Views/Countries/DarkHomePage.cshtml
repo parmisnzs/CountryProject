@@ -1,0 +1,131 @@
+﻿
+@{
+    ViewBag.Title = "Dark HomePage";
+    Layout = "~/Views/Shared/_DarkLayout.cshtml";
+    
+}
+
+<div class="row">
+    <div class="col-md-4 inputContainer-Dark">
+        <i class="fa fa-search icon"></i>
+        <input class="form-control Field-Dark" type="text" id="filterInput" placeholder="search for a country..." />
+    </div>
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+        <div class="btn-group">
+            <button class="btn btn-default dropdown-toggle-dark" type="button" data-toggle="dropdown">
+                <span class="btn-span">Filter by Region </span> <i class="fa fa-angle-down btn-icon"></i>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+                <li><a onclick="FilterByRegion('Africa')" href="#">Africa</a></li>
+                <li><a onclick="FilterByRegion('Americas')" href="#">Americas</a></li>
+                <li><a onclick="FilterByRegion('Asia')" href="#">Asia</a></li>
+                <li><a onclick="FilterByRegion('Europe')" href="#">Europe</a></li>
+                <li><a onclick="FilterByRegion('Oceania')" href="#">Oceania</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="row countryListDiv" id="countryList">
+</div>
+
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script>
+    var listData = [];
+    $(document).ready(function () {
+        $.ajax({
+           url: "@Url.Action("GetAllData", "Countries")",
+            dataType: "json",
+            type: "Get",
+            success: function (data) {
+            $.ajax({
+            url: "@Url.Action("_CountrySectionDark", "Countries")",
+
+            type: "Get",
+                success: function (obj) {
+                    $("#countryList").html(obj);
+            },
+
+            error: function (obj) {
+                alert('No Valid Data');
+            }
+        });
+            },
+
+            error: function (data) {
+                alert('No Valid Data');
+            }
+        });
+    });
+            //setup before functions
+        var typingTimer;                //timer identifier
+        var doneTypingInterval = 2000;  //time in ms, 5 seconds for example
+        var $input = $('#filterInput');
+
+        //on keyup, start the countdown
+        $input.on('keyup', function () {
+          clearTimeout(typingTimer);
+          typingTimer = setTimeout(doneTyping, doneTypingInterval);
+        });
+
+        //on keydown, clear the countdown
+        $input.on('keydown', function () {
+          clearTimeout(typingTimer);
+        });
+
+        //user is "finished typing," do something
+    function doneTyping() {
+        var filterVal = $('#filterInput').val();
+            $.ajax({
+            url: "@Url.Action("GetCountryByName", "Countries")",
+            data: {name : filterVal},
+            type: "Get",
+                success: function (obj) {
+           $.ajax({
+            url: "@Url.Action("_CountrySectionDark", "Countries")",
+
+            type: "Get",
+                success: function (obj) {
+                    $("#countryList").html(obj);
+            },
+
+            error: function (obj) {
+                //alert('No Valid Data');
+            }
+        });
+            },
+
+            error: function (obj) {
+                //alert('No Valid Data');
+            }
+        });
+    }
+
+    function FilterByRegion(region) {
+        $.ajax({
+            url: "@Url.Action("GetCountryByRegion", "Countries")",
+            data: {region : region},
+            type: "Get",
+                success: function (obj) {
+           $.ajax({
+            url: "@Url.Action("_CountrySectionDark", "Countries")",
+
+            type: "Get",
+                success: function (obj) {
+                    $("#countryList").html(obj);
+            },
+
+            error: function (obj) {
+                //alert('No Valid Data');
+            }
+        });
+            },
+
+            error: function (obj) {
+                //alert('No Valid Data');
+            }
+        });
+    }
+
+</script>

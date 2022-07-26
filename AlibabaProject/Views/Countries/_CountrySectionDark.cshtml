@@ -1,0 +1,22 @@
+﻿@model  IEnumerable<AlibabaProject.Models.Country>
+@using AlibabaProject.Models
+
+@{
+    List<Country> countryList = Model as List<Country>;
+    ViewBag.Title = "_CountrySectionDark";
+}
+@foreach (var item in countryList)
+{
+    <div class="col-md-3 col-12">
+        <div class="countryBox-dark" onclick="location.href='@Url.Action("GetByNameDark","Countries" , new {name = item.Name })'">
+            <div class="ImageBox" onclick="location.href='@Url.Action("GetByNameDark","Countries" , new {name = item.Name })'"><img width="223" height="110" class="img-country" src="@item.Flag.Svg" /></div>
+            <div class="title-dark">@item.Name</div>
+            <ul class="infoList-dark">
+                <li><span><b class="listBold">Population</b></span> : @item.Population</li>
+                <li><span><b class="listBold">Region</b></span>: @item.Region</li>
+                <li><span><b class="listBold">Capital</b></span>: @item.Capital</li>
+            </ul>
+        </div>
+    </div>
+
+}
